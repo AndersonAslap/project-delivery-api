@@ -26,5 +26,8 @@
   },
   "scripts": {
     "test": "jest --runInBand --detectOpenHandles"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
   }
 }
