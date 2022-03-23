@@ -1,0 +1,11 @@
+{
+  "name": "project-delivery-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AndersonAslap/project-delivery-api.git",
+  "author": "Anderson Adolfo <anderson.adolfo1998@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.1.1"
+  }
+}

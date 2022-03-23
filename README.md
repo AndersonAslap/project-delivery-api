@@ -1,13 +1,14 @@
 ## Delivery API
 
 ## Libraries
-- Express
-- Prisma
-- Swagger
+- express
+- prisma
+- swagger
 
 ## Libraries DEV Dependecy
-- Jest
-- TypeScript
+- jest
+- typescript
+- git-commit-msg-linter
 
 ## Configurations
 
