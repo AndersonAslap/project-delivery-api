@@ -2,6 +2,9 @@
 
 ## Libraries
 - express
+- prisma
+- bcrypt
+- JsonWebToken
 
 ## Libraries DEV Dependecy
 - jest
