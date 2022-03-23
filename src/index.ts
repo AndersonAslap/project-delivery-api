@@ -1,1 +1,1 @@
-const a: string = "Aslap";
+const a = 'Aslap';
