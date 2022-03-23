@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
+    "strict": true,
+    "lib": [
+      "esnext"
+    ],
     "target": "es2021",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
