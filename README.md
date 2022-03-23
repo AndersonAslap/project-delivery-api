@@ -1,8 +1,12 @@
 ## Delivery API
 
 ## Libraries
+- Express
+- Prisma
 
 ## Libraries DEV Dependecy
+- Jest
+- TypeScript
 
 ## Configurations
 
