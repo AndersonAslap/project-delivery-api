@@ -3,6 +3,7 @@
 ## Libraries
 - Express
 - Prisma
+- Swagger
 
 ## Libraries DEV Dependecy
 - Jest
