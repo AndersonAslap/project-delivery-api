@@ -1,11 +1,19 @@
 import { inject, injectable } from "tsyringe";
 
-import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
 import { Client } from "../../infra/prismaorm/entities/Client";
 import { IClientsRepository } from "../../repositories/IClientsRepository";
 
+import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
+
+
 @injectable()
 class CreateClientUseCase {
+  /*private clientsRepository: IClientsRepository;
+
+  constructor(ClientsRepository: IClientsRepository) {
+    this.clientsRepository = ClientsRepository;
+  }*/
+
   constructor(
     @inject("ClientsRepository")
     private clientsRepository: IClientsRepository

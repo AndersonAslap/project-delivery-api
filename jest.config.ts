@@ -9,5 +9,6 @@ export default {
   collectCoverage: true,
   collectCoverageFrom: ["<rootDir>/src/modules/**/useCases/**/*.ts"],
   coverageDirectory: 'coverage',
-  coverageReports: ["text-sumary", "lcov"]
+  coverageReports: ["text-sumary", "lcov"],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts']
 };
