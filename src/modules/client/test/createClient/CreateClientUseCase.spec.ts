@@ -14,7 +14,6 @@ describe("create-client-use-case", () => {
 
     it("should be able a create new client", async () => {
         const client = await createClientUseCase.execute(clientDTO);
-        console.log(client);
         expect(client.username).toBe("Aslap");
     });
 });

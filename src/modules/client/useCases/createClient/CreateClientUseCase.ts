@@ -8,11 +8,6 @@ import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
 
 @injectable()
 class CreateClientUseCase {
-  /*private clientsRepository: IClientsRepository;
-
-  constructor(ClientsRepository: IClientsRepository) {
-    this.clientsRepository = ClientsRepository;
-  }*/
 
   constructor(
     @inject("ClientsRepository")
