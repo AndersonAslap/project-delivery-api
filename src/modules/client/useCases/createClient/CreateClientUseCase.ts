@@ -6,6 +6,7 @@ import { IClientsRepository } from "../../repositories/IClientsRepository";
 import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
 
 
+
 @injectable()
 class CreateClientUseCase {
 
@@ -15,6 +16,12 @@ class CreateClientUseCase {
   ) { }
 
   async execute({ username, password }: ICreateClientDTO): Promise<Client> {
+    const clientAlreadyExist = await this.clientsRepository.findByUsername(username);
+
+    if (clientAlreadyExist) {
+      throw new Error("Client Already Exists!");
+    }
+
     const client = await this.clientsRepository.create({ username, password });
     return client;
   }
