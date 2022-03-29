@@ -14,10 +14,10 @@ describe("create-client-use-case", () => {
 
     it("should be able a create new client", async () => {
         const client = await createClientUseCase.execute(clientDTO);
-        expect(client.username).toBe("Aslap");
+        expect(client.username).toBe("Anderson");
     });
 
-    it("should not be able create new client", async () => {
+    it("should not be able create new client", () => {
         expect(async () => {
             await createClientUseCase.execute(clientDTO);
         }).rejects.toBeInstanceOf(Error);

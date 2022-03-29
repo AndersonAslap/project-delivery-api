@@ -4,7 +4,7 @@ interface ICreateClientDTO {
 }
 
 const clientDTO: ICreateClientDTO = {
-  username: "Aslap",
+  username: "Anderson",
   password: "aslap#1998"
 }
 

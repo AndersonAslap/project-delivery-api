@@ -4,8 +4,7 @@ import { Client } from "../../infra/prismaorm/entities/Client";
 import { IClientsRepository } from "../../repositories/IClientsRepository";
 
 import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
-
-
+import { hash } from "bcrypt";
 
 @injectable()
 class CreateClientUseCase {
@@ -22,7 +21,9 @@ class CreateClientUseCase {
       throw new Error("Client Already Exists!");
     }
 
-    const client = await this.clientsRepository.create({ username, password });
+    const hashPassword = await hash(password, 10);
+
+    const client = await this.clientsRepository.create({ username, password: hashPassword });
     return client;
   }
 }
