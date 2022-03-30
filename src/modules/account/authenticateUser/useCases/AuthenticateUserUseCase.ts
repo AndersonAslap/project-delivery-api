@@ -1,0 +1,5 @@
+class AuthenticateUserUseCase {
+
+}
+
+export { AuthenticateUserUseCase };
