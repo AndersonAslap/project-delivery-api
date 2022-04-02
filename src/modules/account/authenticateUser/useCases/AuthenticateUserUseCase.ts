@@ -1,5 +1,0 @@
-class AuthenticateUserUseCase {
-
-}
-
-export { AuthenticateUserUseCase };
