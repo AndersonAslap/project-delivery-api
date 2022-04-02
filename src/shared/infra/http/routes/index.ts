@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { clientsRoutes } from "./client.routes";
 
-const router = Router();
+const routes = Router();
 
-router.use("/clients", clientsRoutes);
+routes.use("/clients", clientsRoutes);
 
-export { router };
+export { routes };

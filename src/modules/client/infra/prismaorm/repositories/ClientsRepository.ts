@@ -15,9 +15,7 @@ class ClientsRepository implements IClientsRepository {
   async findByUsername(username: string): Promise<Client> {
     const client = await this.repository.findFirst({
       where: {
-        username: {
-          mode: "insensitive"
-        }
+        username
       }
     });
 

@@ -15,6 +15,7 @@ class CreateClientUseCase {
   ) { }
 
   async execute({ username, password }: ICreateClientDTO): Promise<Client> {
+    console.log({ username, password });
     const clientAlreadyExist = await this.clientsRepository.findByUsername(username);
 
     if (clientAlreadyExist) {
@@ -24,6 +25,7 @@ class CreateClientUseCase {
     const hashPassword = await hash(password, 10);
 
     const client = await this.clientsRepository.create({ username, password: hashPassword });
+
     return client;
   }
 }
