@@ -5,6 +5,7 @@ import { IClientsRepository } from "../../repositories/IClientsRepository";
 
 import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
 import { hash } from "bcrypt";
+import { AppError } from "../../../../shared/error/AppError";
 
 @injectable()
 class CreateClientUseCase {
@@ -19,7 +20,7 @@ class CreateClientUseCase {
     const clientAlreadyExist = await this.clientsRepository.findByUsername(username);
 
     if (clientAlreadyExist) {
-      throw new Error("Client Already Exists!");
+      throw new AppError("Client Already Exists!", 400);
     }
 
     const hashPassword = await hash(password, 10);
