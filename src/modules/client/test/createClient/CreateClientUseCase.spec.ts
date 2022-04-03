@@ -1,6 +1,7 @@
 import { ClientsRepositoryInMemory } from "../../repositories/in-memory/ClientsRepositoryInMemory";
 import { CreateClientUseCase } from "../../useCases/createClient/CreateClientUseCase";
 import { clientDTO } from "../../dtos/ICreateClientDTO";
+import { AppError } from "../../../../shared/error/AppError";
 
 let clientsRepositoryInMemory: ClientsRepositoryInMemory;
 let createClientUseCase: CreateClientUseCase;
@@ -20,6 +21,6 @@ describe("create-client-use-case", () => {
     it("should not be able create new client", () => {
         expect(async () => {
             await createClientUseCase.execute(clientDTO);
-        }).rejects.toBeInstanceOf(Error);
+        }).rejects.toBeInstanceOf(new AppError("Client Already Exists!", 400));
     });
 });

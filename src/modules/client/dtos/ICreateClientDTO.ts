@@ -8,4 +8,9 @@ const clientDTO: ICreateClientDTO = {
   password: "aslap#1998"
 }
 
-export { ICreateClientDTO, clientDTO };
+const clientDTO_2: ICreateClientDTO = {
+  username: "Anderson",
+  password: "aslap#1998"
+}
+
+export { ICreateClientDTO, clientDTO, clientDTO_2 };
