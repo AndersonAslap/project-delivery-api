@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
-
 import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
 import { Client } from "../../infra/prismaorm/entities/Client";
 import { IClientsRepository } from "../IClientsRepository";
@@ -11,8 +9,6 @@ class ClientsRepositoryInMemory implements IClientsRepository {
     const client = new Client();
 
     Object.assign(client, { username, password });
-
-    client.id = uuidv4();
 
     this.clients.push(client);
 
