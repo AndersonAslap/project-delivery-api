@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { AppError } from "../../../error/AppError";
 
-async function exceptionsErrorMiddleware(err: Error, request: Request, response: Response, next: NextFunction) {
+async function ensureExceptionsError(err: Error, request: Request, response: Response, next: NextFunction) {
     if (err instanceof AppError) {
         return response
             .status(err.statusCode)
@@ -16,4 +16,4 @@ async function exceptionsErrorMiddleware(err: Error, request: Request, response:
     });
 }
 
-export { exceptionsErrorMiddleware };
+export { ensureExceptionsError };

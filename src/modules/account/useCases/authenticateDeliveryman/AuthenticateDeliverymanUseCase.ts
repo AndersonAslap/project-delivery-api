@@ -28,7 +28,7 @@ class AuthenticateDeliverymanUseCase {
             throw new AppError("Deliveryman does not exists!");
         }
 
-        const passwordMatch = compare(password, deliveryman.password);
+        const passwordMatch = await compare(password, deliveryman.password);
 
         if (!passwordMatch) {
             throw new AppError("Deliveryman does not exists!");
