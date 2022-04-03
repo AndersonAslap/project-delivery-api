@@ -9,7 +9,7 @@ class CreateDeliverymanController {
 
         const createdeliverymanUseCase = container.resolve(CreateDeliverymanUseCase);
 
-        const deliveryman = createdeliverymanUseCase.execute({ username, password });
+        const deliveryman = await createdeliverymanUseCase.execute({ username, password });
 
         return response.json(deliveryman);
     }
