@@ -19,7 +19,7 @@ class CreateDeliverymanUseCase {
 
     async execute({ username, password }: IRequest): Promise<Deliveryman> {
 
-        const deliverymanAlreadyExists = this.deliverymansRepository.findByUsername(username);
+        const deliverymanAlreadyExists = await this.deliverymansRepository.findByUsername(username);
 
         if (deliverymanAlreadyExists) {
             throw new AppError("Deliveryman already exists!");
@@ -27,7 +27,7 @@ class CreateDeliverymanUseCase {
 
         const hashPassword = await hash(password, 10);
 
-        const deliveryman = this.deliverymansRepository.create({ username, password: hashPassword });
+        const deliveryman = await this.deliverymansRepository.create({ username, password: hashPassword });
 
         return deliveryman;
     }
