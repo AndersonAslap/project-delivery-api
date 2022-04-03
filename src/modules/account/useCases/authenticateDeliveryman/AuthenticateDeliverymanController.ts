@@ -15,4 +15,4 @@ class AuthenticateDeliverymanController {
     }
 }
 
-export { }
+export { AuthenticateDeliverymanController };
