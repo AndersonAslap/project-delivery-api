@@ -2,7 +2,7 @@ import { compare } from "bcrypt";
 import { sign } from "jsonwebtoken";
 import { inject, injectable } from "tsyringe";
 import { AppError } from "../../../../shared/error/AppError";
-import { IClientsRepository } from "../../../client/repositories/IClientsRepository";
+import { IClientsRepository } from "../../../clients/repositories/IClientsRepository";
 
 interface IRequest {
     username: string;

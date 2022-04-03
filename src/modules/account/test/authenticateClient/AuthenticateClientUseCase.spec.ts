@@ -1,6 +1,6 @@
-import { clientDTO_2 } from "../../../client/dtos/ICreateClientDTO";
-import { ClientsRepositoryInMemory } from "../../../client/repositories/in-memory/ClientsRepositoryInMemory";
-import { CreateClientUseCase } from "../../../client/useCases/createClient/CreateClientUseCase";
+import { clientDTO_2 } from "../../../clients/dtos/ICreateClientDTO";
+import { ClientsRepositoryInMemory } from "../../../clients/repositories/in-memory/ClientsRepositoryInMemory";
+import { CreateClientUseCase } from "../../../clients/useCases/createClient/CreateClientUseCase";
 import { AuthenticateClientUseCase } from "../../useCases/authenticateClient/AuthenticateClientUseCase";
 
 let clientsRepositoryInMemory: ClientsRepositoryInMemory;

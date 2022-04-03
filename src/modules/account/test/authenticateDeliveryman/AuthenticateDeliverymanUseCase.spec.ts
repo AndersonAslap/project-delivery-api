@@ -1,5 +1,5 @@
-import { DeliverymansRepositoryInMemory } from "../../../deliveryman/repositories/in-memory/DeliverymansRepositoryInMemory";
-import { CreateDeliverymanUseCase } from "../../../deliveryman/useCases/CreateDeliverymanUseCase";
+import { DeliverymansRepositoryInMemory } from "../../../deliverymans/repositories/in-memory/DeliverymansRepositoryInMemory";
+import { CreateDeliverymanUseCase } from "../../../deliverymans/useCases/CreateDeliverymanUseCase";
 import { AuthenticateDeliverymanUseCase } from "../../useCases/authenticateDeliveryman/AuthenticateDeliverymanUseCase";
 
 let deliverymansRepositoryInMemory: DeliverymansRepositoryInMemory;

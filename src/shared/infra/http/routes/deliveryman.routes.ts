@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { AuthenticateDeliverymanController } from "../../../../modules/account/useCases/authenticateDeliveryman/AuthenticateDeliverymanController";
-import { CreateDeliverymanController } from "../../../../modules/deliveryman/useCases/CreateDeliverymanController";
+import { CreateDeliverymanController } from "../../../../modules/deliverymans/useCases/CreateDeliverymanController";
 
 const deliverymanRoutes = Router();
 

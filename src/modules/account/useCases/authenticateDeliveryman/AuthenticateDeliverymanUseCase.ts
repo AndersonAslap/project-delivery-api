@@ -2,7 +2,7 @@ import { compare } from "bcrypt";
 import { sign } from "jsonwebtoken";
 import { injectable, inject } from "tsyringe";
 import { AppError } from "../../../../shared/error/AppError";
-import { IDeliverymansRepository } from "../../../deliveryman/repositories/IDeliverymansRepository";
+import { IDeliverymansRepository } from "../../../deliverymans/repositories/IDeliverymansRepository";
 
 interface IRequest {
     username: string;
