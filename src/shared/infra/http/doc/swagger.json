@@ -1,0 +1,11 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Delivery-API Documentation",
+        "description": "An API to register products",
+        "version": "1.0.0",
+        "contact": {
+            "email": "anderson.estudos1998@gmail.com"
+        }
+    }
+}
