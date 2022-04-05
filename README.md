@@ -1,4 +1,2 @@
 
 Em Desenvolvimento
-
-- Authenticação
