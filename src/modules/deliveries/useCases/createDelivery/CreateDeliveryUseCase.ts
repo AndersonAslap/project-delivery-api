@@ -1,4 +1,4 @@
-import { injectable } from "tsyringe";
+import { inject, injectable } from "tsyringe";
 import { Delivery } from "../../infra/prismaorm/entities/Delivery";
 import { IDeliveriesRepository } from "../../repositories/IDeliveriesRepository";
 
@@ -6,6 +6,7 @@ import { IDeliveriesRepository } from "../../repositories/IDeliveriesRepository"
 class CreateDeliveryUseCase {
 
     constructor(
+        @inject("DeliveriesRepository")
         private deliveriesRepository: IDeliveriesRepository
     ) { }
 
